@@ -4,10 +4,26 @@ import './Header.css';
 import Button from './Button';
 
 const Header = () =>{
+
+    const [headerSticky, setHeaderSticky] = useState(false);
+
+    const changeHeader = () =>{
+        if(window.scrollY>=100){
+            setHeaderSticky(true);
+        }
+        else{
+            setHeaderSticky(false);
+        }
+    };
+
+    window.addEventListener('scroll', changeHeader);
+
     return(
-        <header className="header">
+        <header className={`header ${headerSticky ? 'header__sticky' : ''}`}>
             <div className="header__logo">
-                <img src="logo.png" id="logo" alt=""/>
+                <Link to="/">
+                    <img src="logo.png" id="logo" alt=""/>
+                </Link>
             </div>
             <div className="header__list">
                 <Link to="/" className="header__item">
@@ -30,11 +46,11 @@ const Header = () =>{
                 </Link>
             </div>
             <div className="header__bonus">
-                <i style={{ color: '#fff'}} class="fas fa-search" />
+                <i style={{ color: '#fff'}} className="fas fa-search" />
                 <span style={{ color: '#bcbcbc', fontSize: '17px', padding: '0 10px 0 20px' }}>|</span>
-                <i style={{ color: 'rgb(228, 216, 4)'}} class="fas fa-globe-europe" />
-                <span style={{ color: '#fff', paddingLeft: '7px'}}>EN</span>
-                <Button size="small" color="yellow" />
+                <i style={{ color: 'rgb(228, 216, 4)'}} className="fas fa-globe-europe" />
+                <span style={{ color: '#fff', paddingLeft: '7px', paddingRight: '20px'}}>EN</span>
+                <Button size="medium" color="yellow" nameButton="SIGN IN" />
             </div>
         </header>
     );

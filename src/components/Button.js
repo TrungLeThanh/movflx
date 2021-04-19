@@ -1,8 +1,9 @@
 import React from 'react';
+import './Button.css';
 
-const Button = ({size, color}) => {
+const Button = ({size, color, nameButton}) => {
     return(
-        <button className={`${size} ui inverted ${color} button`}></button>
+        <button id="buttonStyle" className={`${size} ui inverted ${color} button`}>{nameButton}</button>
     );
 };
 
