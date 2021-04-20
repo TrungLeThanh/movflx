@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,9 +8,54 @@
 
 .wrap{
     width: 100%;
-    height: 130vh;
-    background-image:linear-gradient(rgba(37, 37, 37, 0.3),rgba(48, 48, 48, 0.5)) , url('https://themebeyond.com/html/movflx/img/banner/banner_bg01.jpg');
+    height: 150vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.164),rgba(10, 10, 10, 0.171)) , url('https://themebeyond.com/html/movflx/img/banner/banner_bg01.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-position-x: right;
+    padding-left: 73px;
+    color: #fff;
+    overflow: hidden;
+}
+
+h6{
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    padding-top: 240px;
+    color: rgb(228, 216, 4);
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    padding-bottom: 20px;;
+}
+
+.bonus{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 20px;
+}
+
+
+.watch{
+    padding-top: 40px;
+}
+
+/*------------------- RESPONSIVE --------------------*/
+
+/* Mobile */
+
+@media (max-width: 739px){
+    .wrap{
+        padding-left: 30px;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    .bonus{
+        display: inline-block;
+        padding-top: 5px;
+    }
 }
