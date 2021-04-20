@@ -95,11 +95,11 @@ const Header = () =>{
                             <i style={{paddingRight: '12px'}} className="fas fa-address-book" />CONTACTS
                         </Link>
                         <div className="menu__social">
-                            <i class="fab fa-facebook-square menu__social--icon" />
-                            <i class="fab fa-twitter menu__social--icon" />
-                            <i class="fab fa-pinterest-square menu__social--icon" />
-                            <i class="fab fa-youtube menu__social--icon" />
-                            <i class="fab fa-instagram-square menu__social--icon" />
+                            <i className="fab fa-facebook-square menu__social--icon" />
+                            <i className="fab fa-twitter menu__social--icon" />
+                            <i className="fab fa-pinterest-square menu__social--icon" />
+                            <i className="fab fa-youtube menu__social--icon" />
+                            <i className="fab fa-instagram-square menu__social--icon" />
                         </div>
                     </div>
                 </div>
