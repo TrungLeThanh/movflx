@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-header{
+.header{
     width: 100%;
     height: 105px;
     display: flex;
@@ -22,7 +22,7 @@ header{
     transform: translateY(20px);
 }
 
-/*  */
+/*------------- HEADER PC --------------- */
 
 .header__logo{
     width: 8%;
@@ -30,7 +30,7 @@ header{
 
 #logo{
     position: absolute;
-    padding: 30px 0 0 63px;
+    padding: 30px 0 0 73px;
 }
 
 /*  */
@@ -42,7 +42,6 @@ header{
 .header__item{
     font-size:14px;
     font-family: 'Poppins', sans-serif;
-    /* color: rgb(228, 216, 4); */
     color: #fff;
     line-height: 105px;
     padding-left: 40px;
@@ -57,5 +56,135 @@ header{
 .header__bonus{
     width: 20%;
     line-height: 105px;
-    padding-left: 36px;
+    padding-left: 26px;
 }
+
+/*------------------- HEADER TABLET & Mobile------------- */
+
+.menu__list{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: #171D22;
+    z-index: 3;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+
+.menu__item{
+    z-index: 999;
+    font-size:14px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    padding: 20px 0 20px 40px;
+    border-bottom: 1px solid rgb(58, 58, 58);
+}
+
+.menu__item:hover{
+    color: rgb(228, 216, 4);
+}
+
+#menu-logo{
+    padding: 30px 0 28px 25px;
+}
+
+#menu-close{
+    color: #fff;
+    position: absolute;
+    font-size: 19px;
+    right: 30px;
+    top: 40px;
+    cursor: pointer;
+}
+
+/*  */
+#select{
+    color: #fff;
+    font-size: 20px;
+    line-height: 105px;
+    position: absolute;
+    right: 0;
+    padding-right: 73px;
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/*  */
+
+.header__overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(22, 22, 22, 0.616);
+}
+
+#nav-mobile-input:checked ~ .menu__list{
+    transform: translateX(0%);
+}
+
+.menu__social{
+    color: #fff;
+    padding-top: 30px;
+    font-size: 17px;
+    padding-left: 60px;
+    cursor: pointer;
+}
+
+.menu__social--icon{
+    padding-left: 20px;
+}
+
+.menu__social--icon:hover{
+    color: rgb(228, 216, 4);
+}
+/*------------------- RESPONSIVE --------------------*/
+
+/* pc */
+@media (max-width: 1202px){
+    #login--button{
+        display:none;
+    }
+}
+
+/* Mobile & tablet */
+@media (max-width: 1023px){
+    .header__list{
+        display: none;
+    }
+
+    .header__bonus{
+        display: none;
+    }
+
+    #select{
+        display: block;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width:1023){
+
+}
+
+/* Mobile */
+
+@media (max-width: 739px){
+    #logo{
+        padding-left: 30px;
+    }
+
+    #select{
+        padding-right: 30px;
+    }
+}
+
+
+
