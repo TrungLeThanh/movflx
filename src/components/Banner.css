@@ -8,7 +8,7 @@
 
 .wrap{
     width: 100%;
-    height: 150vh;
+    height: 100vh;
     background-image:linear-gradient(rgba(0, 0, 0, 0.164),rgba(10, 10, 10, 0.171)) , url('https://themebeyond.com/html/movflx/img/banner/banner_bg01.jpg');
     background-repeat:no-repeat;
     background-size:cover;
@@ -56,6 +56,20 @@ h2{
 
     .bonus{
         display: inline-block;
+        padding-top: 5px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 504px){
+
+    h2{
+        font-size: 30px;
+    }
+
+    .bonus{
+        display: none;
         padding-top: 5px;
     }
 }
