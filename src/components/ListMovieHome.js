@@ -4,6 +4,7 @@ import ListMovieAct from './listMovies/ListMovieAct';
 import ListMovieHorror from './listMovies/ListMovieHorror';
 import ListMovieCartoon from './listMovies/ListMovieCartoon';
 import Button from './Button';
+import ReactPaginate from 'react-paginate';
 
 const ListMovieHome = () =>{
     
@@ -33,7 +34,7 @@ const ListMovieHome = () =>{
 
     return (
         <div className="list-movie">
-            <span>
+            <div style={{ marginBottom: '30px', marginLeft: '7px' }}>
                 <Button 
                     size="medium"
                     color="yellow"
@@ -52,7 +53,7 @@ const ListMovieHome = () =>{
                     nameButton="Cartoon"
                     onClick={onClickCartoon}
                 />
-            </span>
+            </div>
             {renderList()}
         </div>
     );
