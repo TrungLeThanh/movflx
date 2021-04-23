@@ -1,13 +1,13 @@
 import React from 'react';
 import Banner from '../Banner';
-import ListMovie from '../ListMovie';
+import ListMovieHome from '../ListMovieHome';
 
 class Home extends React.Component {
     render() {
         return (
             <>
                 <Banner />
-                <ListMovie />
+                <ListMovieHome />
             </>
         );
     };

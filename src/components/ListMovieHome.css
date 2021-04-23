@@ -8,7 +8,8 @@
     width: 100%;
     height: 100vh;
     background: #100F18;
-    padding-left: 73px;
+    padding-left: 100px;
+    padding-right: 100px;
     background-image:linear-gradient(rgba(0, 0, 0, 0.164),rgba(10, 10, 10, 0.171)) , url('https://themebeyond.com/html/movflx/img/bg/ucm_bg_shape.png');
     background-repeat:no-repeat;
     background-size:cover;
