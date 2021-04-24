@@ -17,6 +17,7 @@
     background-repeat:no-repeat;
     background-size:cover;
     overflow: hidden;
+    padding-bottom: 56px;
 }
 
 .custom-btn{

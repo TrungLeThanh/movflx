@@ -35,3 +35,15 @@
     color: rgb(228, 216, 4);
 }
 
+.cards{
+    display: flex;
+}
+
+@media (max-width: 569px){
+    .cards{
+        flex-direction: column;
+    }
+}
+
+
+

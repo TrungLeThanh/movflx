@@ -5,7 +5,7 @@ const CardMovie = ({title, poster, release_date, vote_average}) =>{
     return(
         <>
         <div className="col col-lg-3 col-md-4 col-sm-6 col-xs-12 style">
-            <div className="ui cards" data-aos="fade-right" data-aos-duration="500">
+            <div className="ui cards" data-aos="fade-right" data-aos-duration="1000">
                 <div className="card">
                     <div className="image">
                         <img src={`http://image.tmdb.org/t/p/w300/${poster}`} alt="Poster Film" style={{height: '350px', width: '100%'}} />

@@ -1,0 +1,15 @@
+.back-top{
+    position: absolute;
+    right: 60px;
+    bottom: 80px;
+}
+
+#back-btn{
+    transform: translateY(-110vh);
+    transition: 1s;
+}
+
+#back-tran{
+    transform: translateY(0vh);
+    transition: 1s;
+}

@@ -9,7 +9,7 @@ const ListMovieHorror = ({ movies, fetchMovieHome }) =>{
 
     const [pageNumber, setPageNumber] = useState(0);
 
-    const moviesPage = 8;
+    const moviesPage = 4;
     const pagesVisited = pageNumber * moviesPage;
     
     useEffect(() =>{
