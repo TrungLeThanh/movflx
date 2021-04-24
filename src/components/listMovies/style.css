@@ -5,6 +5,7 @@
     display: flex;
     padding-left: 15px;
     color: rgb(228, 216, 4);
+    padding-top: 20px;
 }
 
 .paginationBttns a {
@@ -16,24 +17,16 @@
     cursor: pointer;
 }
 
+.btnpag{
+    display: none;
+}
+
 .paginationBttns a:hover {
     color: black;
     background-color: rgb(228, 216, 4);
 }
 
-.paginationActive a{
-    background-color: rgb(228, 216, 4);
-}
-
-.paginationActive{
-    color: black;
-}
-
-.paginationActive a:hover {
-    color: black;
-    background-color: rgb(228, 216, 4);
-}
-
 .paginationDisabled a {
-    color:rgb(228, 216, 4);
+    color: rgb(109, 109, 109);
+    background-color: rgb(19, 19, 19);
 }

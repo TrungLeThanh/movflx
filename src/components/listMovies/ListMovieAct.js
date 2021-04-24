@@ -13,14 +13,19 @@ const ListMovieAct = ({ movies, fetchMovieHome }) =>{
     const pagesVisited = pageNumber * moviesPage;
     
     useEffect(() =>{
-        fetchMovieHome('school');
+        fetchMovieHome('war');
     }, []);
 
     const renderListMovie = () =>{
         return movies.slice(pagesVisited, pagesVisited + moviesPage).map(movie=>{
             return (
                 <Fragment key={movie.id}>
-                    <CardMovie title={movie.title} poster={movie.poster_path}/>
+                    <CardMovie 
+                        title={movie.title} 
+                        poster={movie.poster_path} 
+                        release_date={movie.release_date} 
+                        vote_average={movie.vote_average}
+                    />
                 </Fragment>
             )
         })
@@ -36,15 +41,15 @@ const ListMovieAct = ({ movies, fetchMovieHome }) =>{
         <div className="row">
             {renderListMovie()}
             <ReactPaginate
-                previousLabel={"Previous"}
-                nextLabel={"Next"}
+                previousLabel={<i className="fas fa-chevron-left" />}
+                nextLabel={<i className="fas fa-chevron-right" />}
                 pageCount={pageCount}
                 onPageChange={changePage}
                 containerClassName={"paginationBttns"}
+                pageClassName={"btnpag"}
                 previousLinkClassName={"previousBttn"}
                 nextLinkClassName={"nextBttn"}
                 disabledClassName={"paginationDisabled"}
-                activeClassName={"paginationActive"}
             />
         </div>
     );
