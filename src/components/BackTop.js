@@ -26,8 +26,8 @@ const BackTop = () =>{
 
     return (
         <div className="back-top">
-            <button onClick={onClickBtn} id={back ? 'back-tran' : 'back-btn'} style={{background: 'rgb(228, 216, 4)', position: 'fixed'}} className="ui circular icon button">
-                <i style={{width: '20px', height: '15px'}} className="fas fa-chevron-up" />
+            <button onClick={onClickBtn} id={back ? 'back-tran' : 'back-btn'} className="ui circular icon button">
+                <i style={{width: '15px', height: '15px'}} className="fas fa-chevron-up" />
             </button>
         </div>
         

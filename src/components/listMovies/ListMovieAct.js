@@ -14,7 +14,7 @@ const ListMovieAct = ({ movies, fetchMovieHome }) =>{
     
     useEffect(() =>{
         fetchMovieHome('war');
-    }, []);
+    });
 
     const renderListMovie = () =>{
         return movies.slice(pagesVisited, pagesVisited + moviesPage).map(movie=>{

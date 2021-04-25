@@ -72,4 +72,24 @@ h2{
         display: none;
         padding-top: 5px;
     }
+
+    #b{
+        font-size: 13px;
+    }
+}
+
+
+/* btn bonus */
+
+#b{
+    background: transparent;
+    border: 1.5px solid rgb(228, 216, 4);
+    border-radius: 30px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+#b:hover{
+    background: rgb(228, 216, 4);
+    color: black;
 }

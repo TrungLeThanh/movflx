@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+.wrap-rate-movie{
+    width: 100%;
+    height: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 100px;
+    padding-bottom: 90px;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.164),rgba(10, 10, 10, 0.171)) , url('https://themebeyond.com/html/movflx/img/bg/tr_movies_bg.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.rate-title{
+    text-align: center;
+}
+
+.rate-title p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    color: rgb(228, 216, 4);
+    letter-spacing: 1px;
+}
+
+.rate-title h2{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    font-style: normal;
+    line-height: 43px;
+    font-weight: 700;
+    margin-top: -1px;
+    margin-bottom: 40px;
+}
+
+.rate-btn{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content:center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px){
+    .rate-title h2{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 556px){
+    .rate-btn{
+        flex-direction: column;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media (max-width: 556px){
+    .wrap-rate-movie{
+        padding-left: 30px;
+        padding-right: 31px;
+    }
+}
+@media (max-width: 465px){
+    .rate-btn{
+        flex-direction: column;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+

@@ -7,6 +7,7 @@
     background-image:linear-gradient(rgba(0, 0, 0, 0.164),rgba(10, 10, 10, 0.171)) , url('https://themebeyond.com/html/movflx/img/bg/services_bg.jpg');
     background-repeat:no-repeat;
     background-size:cover;
+    background-position-x: right;
     display: flex;
     padding-left: 110px;
     padding-right: 110px;

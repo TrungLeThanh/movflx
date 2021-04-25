@@ -7,9 +7,16 @@
 #back-btn{
     transform: translateY(-110vh);
     transition: 1s;
+    background: rgb(228, 216, 4);
 }
 
 #back-tran{
     transform: translateY(0vh);
     transition: 1s;
+    background: rgb(228, 216, 4);
+    position: fixed;
+}
+
+#back-tran:hover{
+    background: rgb(78, 78, 78);
 }

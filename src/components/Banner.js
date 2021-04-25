@@ -24,8 +24,7 @@ const Banner = () =>{
                     </span>
                 </span>
                 <div className="watch">
-                    <button style={{border: '1px solid rgb(228, 216, 4)', borderRadius: '25px'}} className="large ui red basic button">
-                    <i style={{paddingRight: '10px'}} className="fas fa-play" />WATCH NOW</button>
+                    <button id="b" className="big ui button"><i style={{paddingRight: '10px'}} className="fas fa-play" /> <span style={{fontSize: '14px', letterSpacing: '1px'}}>WATCH NOW</span> </button>
                 </div>
             </div>
         </div>

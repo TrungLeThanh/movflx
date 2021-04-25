@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+.wrap-trial{
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(rgba(70, 69, 69, 0.164),rgba(10, 10, 10, 0.171)) , url('https://themebeyond.com/html/movflx/img/bg/newsletter_bg.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    display: flex;
+    padding-left: 190px;
+    padding-right: 190px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.wrap-trial-left{
+    width: 50%;
+}
+
+.wrap-trial-right{
+    width: 50%;
+}
+
+.wrap-trial-left h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: rgb(23,29,34);
+}
+
+.wrap-trial-left p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+    color: rgb(23,29,34);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1247px){
+    .wrap-trial{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+}
+
+#inp-trial{
+    width: 300px;
+    height: 50px;
+}
+
+@media (max-width: 1059px){
+    .wrap-trial{
+        flex-direction: column;
+    }
+
+    .wrap-trial-left{
+        width: 100%;
+    }
+
+    .wrap-trial-left p{
+        margin-bottom: 20px;
+    }
+    .wrap-trial-right{
+        width: 100%;
+    }
+}
+
+
+@media (max-width:570px){
+    .wrap-trial{
+        padding-left: 31px;
+        padding-right: 31px;
+    }
+
+    #inp-trial{
+        width: 200px;
+        height: 40px;
+    }
+
+    .wrap-trial-left h4{
+        font-size: 20px;
+    }
+
+    .wrap-trial-left p{
+        font-size: 12px;
+    }
+}
