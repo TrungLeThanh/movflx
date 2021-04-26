@@ -16,7 +16,7 @@ const CardMovie = ({title, poster, release_date, vote_average}) =>{
                     <p style={{color: 'rgb(228, 216, 4)'}}>
                         {release_date} 
                     </p>
-                    <p>
+                    <div>
                         <span>
                             <div style={{ color: 'rgb(228, 216, 4)', background:'transparent', border: '1px solid #fff'}} className="ui basic label">
                                 4K
@@ -28,7 +28,7 @@ const CardMovie = ({title, poster, release_date, vote_average}) =>{
                             <i style={{color: 'rgb(228, 216, 4)', paddingLeft: '20px'}} className="far fa-clock" />
                             <span style={{color: 'rgb(228, 216, 4)', paddingLeft: '10px'}}>128 min</span>
                         </span>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>

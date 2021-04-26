@@ -11,7 +11,7 @@ const ListTVBest = ({ TVTopRate, fetchTVTopRate }) =>{
     });
 
     const renderListMovie = () =>{
-        return TVTopRate.slice(8, 12).map(tv=>{
+        return TVTopRate.slice(0, 8).map(tv=>{
             return (
                 <Fragment key={tv.id}>
                     <CardMovie 

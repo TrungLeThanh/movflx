@@ -9,9 +9,9 @@ const Trial = () =>{
                 <p>Enter your email to create or restart your membership.</p>
             </div>
             <div className="wrap-trial-right">
-                <div class="ui large action input">
+                <div className="ui large action input">
                     <input id="inp-trial" type="text" placeholder="Enter your email..." />
-                    <button class="ui black button">SEND</button>
+                    <button className="ui black button">SEND</button>
                 </div>
             </div>
         </div>
