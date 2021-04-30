@@ -21,6 +21,7 @@ const ListMovieHorror = ({ movies, fetchMovieHome }) =>{
             return (
                 <Fragment key={movie.id}>
                     <CardMovie 
+                        id={movie.id}
                         title={movie.title} 
                         poster={movie.poster_path} 
                         release_date={movie.release_date} 

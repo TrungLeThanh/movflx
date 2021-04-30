@@ -1,10 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './CardMovie.css';
+const CardMovie = ({id, title, poster, release_date, vote_average, onClick}) =>{
 
-const CardMovie = ({title, poster, release_date, vote_average}) =>{
     return(
         <>
         <div className="col col-lg-3 col-md-4 col-sm-6 col-xs-12 style">
+            <Link to={`movie/${id}`}> 
             <div className="ui cards" data-aos="fade-right" data-aos-duration="1000">
                 <div className="card">
                     <div className="image">
@@ -31,6 +33,7 @@ const CardMovie = ({title, poster, release_date, vote_average}) =>{
                     </div>
                 </div>
             </div>
+            </Link>
         </div>
         </>
     );

@@ -4,6 +4,7 @@ import { fetchMovieHome } from '../../actions';
 import CardMovie from '../CardMovie';
 import ReactPaginate from 'react-paginate';
 import './style.css';
+import VideoDetail from '../main/VideoDetail';
 
 const ListMovieAct = ({ movies, fetchMovieHome }) =>{
 
@@ -16,16 +17,23 @@ const ListMovieAct = ({ movies, fetchMovieHome }) =>{
         fetchMovieHome('war');
     });
 
+    const test = () =>{
+        alert('aa');
+    }
+
     const renderListMovie = () =>{
         return movies.slice(pagesVisited, pagesVisited + moviesPage).map(movie=>{
             return (
                 <Fragment key={movie.id}>
                     <CardMovie 
+                        id={movie.id}
                         title={movie.title} 
                         poster={movie.poster_path} 
                         release_date={movie.release_date} 
                         vote_average={movie.vote_average}
+                        onClick={()=>test}
                     />
+                    {/* <VideoDetail id={movie.id} /> */}
                 </Fragment>
             )
         })

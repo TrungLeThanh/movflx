@@ -16,7 +16,7 @@
 }
 
 .header__sticky{
-    top: -20px;
+    top: -21px;
     background-color: #171D22;
     position: fixed;
     transform: translateY(20px);

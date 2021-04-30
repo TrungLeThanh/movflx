@@ -15,6 +15,7 @@ const ListTVPopular = ({ TVPopular, fetchTVPopular }) =>{
             return (
                 <Fragment key={tv.id}>
                     <CardMovie 
+                        id={tv.id}
                         title={tv.name} 
                         poster={tv.poster_path} 
                         release_date={tv.first_air_date} 
