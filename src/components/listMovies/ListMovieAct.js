@@ -4,7 +4,6 @@ import { fetchMovieHome } from '../../actions';
 import CardMovie from '../CardMovie';
 import ReactPaginate from 'react-paginate';
 import './style.css';
-import VideoDetail from '../main/VideoDetail';
 
 const ListMovieAct = ({ movies, fetchMovieHome }) =>{
 
@@ -33,7 +32,6 @@ const ListMovieAct = ({ movies, fetchMovieHome }) =>{
                         vote_average={movie.vote_average}
                         onClick={()=>test}
                     />
-                    {/* <VideoDetail id={movie.id} /> */}
                 </Fragment>
             )
         })
