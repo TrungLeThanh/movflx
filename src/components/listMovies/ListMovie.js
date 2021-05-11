@@ -1,7 +1,10 @@
-import  React, { Fragment, useState } from 'react';
+import  React, { Fragment, useState, useEffect } from 'react';
 import CardMovie from '../CardMovie';
 import ReactPaginate from 'react-paginate';
 import './style.css';
+import { fetchMovieHome } from '../../actions/index';
+import {connect} from 'react-redux';
+
 
 const ListMovie = (props) =>{
 
@@ -9,6 +12,10 @@ const ListMovie = (props) =>{
 
     const moviesPage = 4;
     const pagesVisited = pageNumber * moviesPage;
+
+    useEffect(() =>{
+        props.fetchMovieHome(props.type);
+    }, [props.type]);
     
     const renderListMovie = () =>{
         return props.movies.slice(pagesVisited, pagesVisited + moviesPage).map(movie=>{
@@ -52,5 +59,9 @@ const ListMovie = (props) =>{
     
 };
 
+const mapStateToProps = (state) =>{
+    return {movies: state.movie}
+}
 
-export default ListMovie;
+
+export default connect(mapStateToProps, {fetchMovieHome}) (ListMovie);

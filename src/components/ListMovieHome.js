@@ -2,8 +2,6 @@ import  React, {useState} from 'react';
 import './ListMovieHome.css';
 import Button from './Button';
 import ListMovie from './listMovies/ListMovie';
-import {fetchMovieHome} from '../actions/index';
-import {connect} from 'react-redux';
 
 const ListMovieHome = ({movies,fetchMovieHome}) =>{
     
@@ -27,12 +25,12 @@ const ListMovieHome = ({movies,fetchMovieHome}) =>{
 
     const renderList = () =>{   
         if(actionType===1){
-            return <ListMovie type="war" fetchMovieHome={fetchMovieHome("war")} movies={movies} />;
+            return <ListMovie type="war" />;
         }
         if(actionType===2){
-            return <ListMovie type="horror" fetchMovieHome={fetchMovieHome("horror")} movies={movies} />;
+            return <ListMovie type="horror" />;
         }
-        return <ListMovie type="superman" fetchMovieHome={fetchMovieHome("superman")} movies={movies} />;
+        return <ListMovie type="superman" />;
     };
 
     return (
@@ -71,8 +69,6 @@ const ListMovieHome = ({movies,fetchMovieHome}) =>{
     );
 }
 
-const mapStateToProps = (state) =>{
-    return {movies: state.movie}
-}
 
-export default connect(mapStateToProps, {fetchMovieHome}) (ListMovieHome);
+
+export default ListMovieHome;

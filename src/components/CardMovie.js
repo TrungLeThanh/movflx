@@ -10,7 +10,7 @@ const CardMovie = ({id, title, poster, release_date, vote_average, onClick}) =>{
             <div className="ui cards" data-aos="fade-right" data-aos-duration="1000">
                 <div className="card">
                     <div className="image">
-                        <img src={`http://image.tmdb.org/t/p/w300/${poster}`} alt="Poster Film" style={{height: '350px', width: '100%'}} />
+                        <img src={`http://image.tmdb.org/t/p/w300/${poster}`} alt="Poster Film" style={{height: '410px', width: '100%'}} />
                     </div>
                 </div>
                 <div className="card__content">

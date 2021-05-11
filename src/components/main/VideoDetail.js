@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './VideoDetail.css';
 import { connect } from 'react-redux';
 import {fetchMovieById} from '../../actions/index';
+import MovieDetail from '../MovieDetail';
 
 const VideoDetail = (props) =>{
 
@@ -11,7 +12,7 @@ const VideoDetail = (props) =>{
 
     return (
         <div className="wrap-video-detail">
-            <p>title: {props.movieId.title}</p>
+            <MovieDetail />
         </div>
     );
 };
