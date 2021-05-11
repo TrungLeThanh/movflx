@@ -1,11 +1,11 @@
 import  React, {useState} from 'react';
 import './ListMovieHome.css';
-import ListMovieAct from './listMovies/ListMovieAct';
-import ListMovieHorror from './listMovies/ListMovieHorror';
-import ListMovieCartoon from './listMovies/ListMovieCartoon';
 import Button from './Button';
+import ListMovie from './listMovies/ListMovie';
+import {fetchMovieHome} from '../actions/index';
+import {connect} from 'react-redux';
 
-const ListMovieHome = () =>{
+const ListMovieHome = ({movies,fetchMovieHome}) =>{
     
     const [actionType, setActionType] = useState(1);
     const [active, setActive] = useState(1);
@@ -25,14 +25,14 @@ const ListMovieHome = () =>{
         setActive(3);  
     }
 
-    const renderList = () =>{
+    const renderList = () =>{   
         if(actionType===1){
-            return <ListMovieAct />;
+            return <ListMovie type="war" fetchMovieHome={fetchMovieHome("war")} movies={movies} />;
         }
-        else if(actionType===2){
-            return <ListMovieHorror />;
+        if(actionType===2){
+            return <ListMovie type="horror" fetchMovieHome={fetchMovieHome("horror")} movies={movies} />;
         }
-        return <ListMovieCartoon />;
+        return <ListMovie type="superman" fetchMovieHome={fetchMovieHome("superman")} movies={movies} />;
     };
 
     return (
@@ -71,5 +71,8 @@ const ListMovieHome = () =>{
     );
 }
 
+const mapStateToProps = (state) =>{
+    return {movies: state.movie}
+}
 
-export default ListMovieHome;
+export default connect(mapStateToProps, {fetchMovieHome}) (ListMovieHome);

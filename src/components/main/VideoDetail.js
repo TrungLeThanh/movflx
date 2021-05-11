@@ -1,12 +1,23 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './VideoDetail.css';
+import { connect } from 'react-redux';
+import {fetchMovieById} from '../../actions/index';
 
-const VideoDetail = ({id}) =>{
+const VideoDetail = (props) =>{
+
+    useEffect(() =>{
+        props.fetchMovieById(props.match.params.id);
+    })
+
     return (
         <div className="wrap-video-detail">
-            <p>ID: {id}</p>
+            <p>title: {props.movieId.title}</p>
         </div>
     );
 };
 
-export default VideoDetail;
+const mapStateToProps = (state) =>{
+    return {movieId: state.movieById};
+};
+
+export default connect(mapStateToProps, {fetchMovieById}) (VideoDetail);

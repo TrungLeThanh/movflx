@@ -1,23 +1,17 @@
-import  React, { Fragment, useEffect, useState } from 'react';
-import { connect } from 'react-redux';
-import { fetchMovieHome } from '../../actions';
+import  React, { Fragment, useState } from 'react';
 import CardMovie from '../CardMovie';
 import ReactPaginate from 'react-paginate';
 import './style.css';
 
-const ListMovieCartoon = ({ movies, fetchMovieHome }) =>{
+const ListMovie = (props) =>{
 
     const [pageNumber, setPageNumber] = useState(0);
 
     const moviesPage = 4;
     const pagesVisited = pageNumber * moviesPage;
     
-    useEffect(() =>{
-        fetchMovieHome('superman');
-    });
-
     const renderListMovie = () =>{
-        return movies.slice(pagesVisited, pagesVisited + moviesPage).map(movie=>{
+        return props.movies.slice(pagesVisited, pagesVisited + moviesPage).map(movie=>{
             return (
                 <Fragment key={movie.id}>
                     <CardMovie 
@@ -26,13 +20,14 @@ const ListMovieCartoon = ({ movies, fetchMovieHome }) =>{
                         poster={movie.poster_path} 
                         release_date={movie.release_date} 
                         vote_average={movie.vote_average}
+                        onClick={()=>test}
                     />
                 </Fragment>
             )
         })
     }
 
-    const pageCount = Math.ceil(movies.length / moviesPage);
+    const pageCount = Math.ceil(props.movies.length / moviesPage);
 
     const changePage = ({ selected }) => {
         setPageNumber(selected);
@@ -57,8 +52,5 @@ const ListMovieCartoon = ({ movies, fetchMovieHome }) =>{
     
 };
 
-const mapStateToProps = (state) =>({
-    movies: state.movie
-});
 
-export default connect(mapStateToProps, {fetchMovieHome}) (ListMovieCartoon);
+export default ListMovie;
