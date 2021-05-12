@@ -15,6 +15,7 @@ const ListMovie = (props) =>{
 
     useEffect(() =>{
         props.fetchMovieHome(props.type);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.type]);
     
     const renderListMovie = () =>{

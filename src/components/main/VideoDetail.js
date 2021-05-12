@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import './VideoDetail.css';
+import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
 import {fetchMovieById} from '../../actions/index';
 import MovieDetail from '../MovieDetail';
@@ -12,7 +11,12 @@ const VideoDetail = (props) =>{
 
     return (
         <div className="wrap-video-detail">
-            <MovieDetail />
+            <MovieDetail
+                poster={props.movieId.poster_path}
+                title={props.movieId.title}
+                status={props.movieId.status}
+                runtime={props.movieId.runtime}
+            />
         </div>
     );
 };

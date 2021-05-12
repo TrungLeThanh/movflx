@@ -5,6 +5,8 @@ import Home from './main/Home';
 import BackTop from './BackTop';
 import Footer from './Footer';
 import VideoDetail from './main/VideoDetail';
+import Trial from './Trial';
+import TVBest from './TVBest';
 
 const App = () => {
     return(
@@ -14,6 +16,8 @@ const App = () => {
                 <Route path="/" exact component={Home} />
                 <Route path="/movie/:id" exact component={VideoDetail} />
                 <BackTop />
+                <TVBest />
+                <Trial />
                 <Footer />
             </BrowserRouter>
         </div>
