@@ -39,3 +39,183 @@
     line-height: 25px;
     color:#fff;
 }
+
+.movie-detail-right p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color:#bcbcbc;
+    padding-top: 23px;
+    line-height:26px;
+}
+
+.movie-detail-right h6{
+    margin: 0;
+    padding: 0;
+    color:#bcbcbc;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight:500px;
+}
+
+
+.right-segment{
+    width: 475px;
+    height: 94px;
+    background-color: rgba(36, 44, 56);
+    border: 1px solid #343434;
+    margin-top: 35px;
+    border-radius: 8px;
+    padding: 22px;
+    display: flex;
+}
+
+#c{
+    background: transparent;
+    border: 1.5px solid rgb(228, 216, 4);
+    border-radius: 25px;
+    transition: 0.5s;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+}
+
+#c:hover{
+    background: rgb(228, 216, 4);
+    color: black;
+}
+
+.share{
+    width:20%;
+    border-right: 1px solid #bcbcbc;
+    color:#bcbcbc;
+    line-height: 45px;
+
+}
+
+.hi{
+    width: 40%;
+    padding-left: 20px;
+}
+
+.hi p{
+    margin: 0;
+    padding:0;
+    font-size: 14px;
+    line-height: 48px;
+}
+.other{
+    width: 40%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1510px){
+    .movie-detail-left{
+        width: 30%;
+    }
+    .movie-detail-right{
+        width: 70%;
+    }
+}
+
+@media (max-width: 1297px){
+    .wrap-movie-detail{
+        flex-direction: column;
+    }
+
+    .movie-detail-left{
+        width: 100%;
+    }
+    .movie-detail-right{
+        width: 100%;
+        padding-left: 0;
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 710px){
+    .movie-detail-right h2{
+        font-size:30px;
+    }
+    
+    .movie-detail-right h5{
+        font-size:15px;
+    }
+    
+    .movie-detail-right p{
+        font-size: 13px;
+    }
+    
+    .movie-detail-right h6{
+        font-size: 12px;
+    }
+
+    #dramma{
+        display: none;
+    }
+
+    .right-segment{
+        width: 400px;
+        height: 80px;
+    }
+
+    .share{
+        line-height: 35px;
+    
+    }
+    
+    .hi p{
+        line-height: 35px;
+    }
+    #c{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 570px){
+    #run{
+        font-size: 10px;
+    }
+    .wrap-movie-detail{
+        padding-left: 35px;
+        padding-right: 10px;
+    }
+
+    .movie-detail-right h2{
+        font-size:20px;
+    }
+    
+    .movie-detail-right h5{
+        font-size:12px;
+    }
+    
+    .movie-detail-right p{
+        font-size: 12px;
+    }
+    
+    .movie-detail-right h6{
+        font-size: 10px;
+    }
+
+    .right-segment{
+        width: 280px;
+    }
+
+    .hi{
+        display: none;
+    }
+
+    .share{
+        width: 40%;
+    }
+
+    .other{
+        width: 60%;
+        padding-left: 10px;
+    }
+
+    #c{
+        font-size: 12px;
+    }
+}
