@@ -1,5 +1,12 @@
 import theMovieDB from '../apis/theMovieDB';
-import { FETCH_MOVIE_HOME, FETCH_MOVIE_TOP_RATE, FETCH_TV_TOP_RATE, FETCH_TV_POPULAR, FETCH_MOVIE_BY_ID } from './types';
+import { 
+    FETCH_MOVIE_HOME, 
+    FETCH_MOVIE_TOP_RATE, 
+    FETCH_TV_TOP_RATE, 
+    FETCH_TV_POPULAR, 
+    FETCH_MOVIE_BY_ID,
+    FETCH_TV_BY_ID
+} from './types';
 import _ from 'lodash';
 
 const API_KEY = 'e4c74354ea589d45cce2ba3047a613c6';
@@ -39,6 +46,14 @@ export const fetchTVPopular = () => async (dispatch) => {
 export const _fetchTVPopular = _.memoize( async (dispatch) => {
     const response = await theMovieDB.get(`/tv/popular?api_key=${API_KEY}&language=en-US&page=2`);
     dispatch({ type: FETCH_TV_POPULAR, payload: response.data.results });
+});
+
+export const fetchTVById = (id) => async (dispatch) => {
+    _fetchTVById(id, dispatch);
+}
+export const _fetchTVById = _.memoize( async (id, dispatch) => {
+    const response = await theMovieDB.get(`/tv/${id}?api_key=${API_KEY}&language=en-US`);
+    dispatch({ type:FETCH_TV_BY_ID, payload: response.data });
 });
 
 

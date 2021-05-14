@@ -1,7 +1,7 @@
 import  React, { Fragment, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchTVPopular } from '../../actions';
-import CardMovie from '../CardMovie';
+import CardTV from '../CardTV';
 import './style.css';
 
 const ListTVPopular = ({ TVPopular, fetchTVPopular }) =>{
@@ -14,7 +14,7 @@ const ListTVPopular = ({ TVPopular, fetchTVPopular }) =>{
         return TVPopular.slice(8, 12).map(tv=>{
             return (
                 <Fragment key={tv.id}>
-                    <CardMovie 
+                    <CardTV 
                         id={tv.id}
                         title={tv.name} 
                         poster={tv.poster_path} 

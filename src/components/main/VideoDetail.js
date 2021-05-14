@@ -19,6 +19,7 @@ const VideoDetail = (props) =>{
                 overview={props.movieId.overview}
                 date={props.movieId.release_date}
                 tagline={props.movieId.tagline}
+                homepage={props.movieId.homepage}
             />
         </div>
     );

@@ -4,11 +4,13 @@ import fetchMovieTopRate from './fetchMovieTopRate';
 import fetchTVTopRate from './fetchTVTopRate';
 import fetchTVPopular from './fetchTVPopular';
 import fetchById from './fetchById';
+import fetchTVByID from './fetchTVByID';
 
 export default combineReducers({
     movie: fetchMovieHome,
     moviesTopRate: fetchMovieTopRate,
     tvTopRate: fetchTVTopRate,
     tvPopular: fetchTVPopular,
-    movieById: fetchById
+    movieById: fetchById,
+    TVById: fetchTVByID
 });

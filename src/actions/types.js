@@ -3,3 +3,4 @@ export const FETCH_MOVIE_TOP_RATE = 'FETCH_MOVIE_TOP_RATE';
 export const FETCH_TV_TOP_RATE = 'FETCH_TV_TOP_RATE';
 export const FETCH_TV_POPULAR = 'FETCH_TV_POPULAR';
 export const FETCH_MOVIE_BY_ID = 'FETCH_MOVIE_BY_ID';
+export const FETCH_TV_BY_ID = 'FETCH_TV_BY_ID';
