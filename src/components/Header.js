@@ -55,7 +55,7 @@ const Header = () =>{
                 </Link>
             </div>
             <div className="header__bonus">
-                <i style={{ color: '#fff'}} className="fas fa-search" />
+                <Link to="/search" style={{ color: '#fff'}} className="fas fa-search" />
                 <span style={{ color: '#bcbcbc', fontSize: '17px', padding: '0 10px 0 20px' }}>|</span>
                 <i style={{ color: 'rgb(228, 216, 4)', fontSize: '17px'}} className="fas fa-globe-europe" />
                 <span style={{ color: '#fff', paddingLeft: '7px', paddingRight: '20px'}}>EN</span>

@@ -8,6 +8,7 @@ import VideoDetail from './main/VideoDetail';
 import TVDetail from './main/TVDetail';
 import Trial from './Trial';
 import TVBest from './TVBest';
+import SearchBar from './SearchBar'
 
 const App = () => {
     return(
@@ -17,6 +18,7 @@ const App = () => {
                 <Route path="/" exact component={Home} />
                 <Route path="/movie/:id" exact component={VideoDetail} />
                 <Route path="/TV/:id" exact component={TVDetail} />
+                <Route path="/search" exact component={SearchBar} />
                 <BackTop />
                 <TVBest />
                 <Trial />

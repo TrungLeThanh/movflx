@@ -5,6 +5,7 @@ import fetchTVTopRate from './fetchTVTopRate';
 import fetchTVPopular from './fetchTVPopular';
 import fetchById from './fetchById';
 import fetchTVByID from './fetchTVByID';
+import { reducer as formReducer } from 'redux-form';
 
 export default combineReducers({
     movie: fetchMovieHome,
@@ -12,5 +13,6 @@ export default combineReducers({
     tvTopRate: fetchTVTopRate,
     tvPopular: fetchTVPopular,
     movieById: fetchById,
-    TVById: fetchTVByID
+    TVById: fetchTVByID,
+    form: formReducer
 });

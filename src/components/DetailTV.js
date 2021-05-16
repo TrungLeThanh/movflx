@@ -1,10 +1,12 @@
 import React from 'react';
 import './MovieDetail.css';
+import {Link} from 'react-router-dom';
 
 const DetailTV = ({poster, title, status, runtime, overview, tagline}) =>{
     return (
         <div className="wrap-movie-detail">
             <div className="movie-detail-left">
+                <Link to="/" style={{color: '#fff', position: 'absolute', top: '142px'}} className="fas fa-arrow-left" />
                 <img src={`http://image.tmdb.org/t/p/w300/${poster}`} alt="Poster Film" style={{height: '430px', width: '315px', borderRadius: '10px'}} />
             </div>
             <div className="movie-detail-right">
