@@ -76,6 +76,9 @@ const Header = () =>{
                         </Link>
                         <label id="menu-close" htmlFor="nav-mobile-input"><i onClick={closeOverlay} className="fas fa-times" /></label>
                         <hr/>
+                        <Link to="/search" className="menu__item">
+                            <i style={{paddingRight: '12px'}} className="fas fa-search" />SEARCH
+                        </Link>
                         <Link to="/" className="menu__item">
                             <i style={{paddingRight: '12px'}} className="fas fa-home" />HOME
                         </Link>
