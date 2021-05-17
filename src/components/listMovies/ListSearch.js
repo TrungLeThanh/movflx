@@ -9,8 +9,18 @@ const ListSearch = (props) =>{
         props.fetchMovieHome(props.type);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.type]);
+
+
     
     const renderListMovie = () =>{
+        if(props.movies.length === 0){
+            return (
+                <div style={{marginLeft: '25px'}} className="ui red bottom attached warning message">
+                    <i className="warning icon"></i>
+                    Oh no, oh no, oh no no no no no!
+                </div>
+            );
+        }
         return props.movies.map(movie=>{
             return (
                 <Fragment key={movie.id}>
